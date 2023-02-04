@@ -10,7 +10,7 @@ The training and test data files of stage 2 are in `data/stage_2_data`. You can 
 
 (Since the size of training dataset exceeds GitHub's file size limit, so I just upload test dataset here. You need to add `train.csv` here to train the model.)
 ### Training
-All of the related source code files are in `source_code/stage_2_code/', and the training script is in `script/stage_2_script/script_mlp.py`. Use command `python script/stage_2_script/script_mlp.py` to train and test the MLP model.
+All of the related source code files are in `source_code/stage_2_code/`, and the training script is in `script/stage_2_script/script_mlp.py`. Use command `python script/stage_2_script/script_mlp.py` to train and test the MLP model.
 
 In this stage, I have not used the configuration file, so if you want to change the training setting or model setting, you need to change the related parameter in `source_code/stage_2_code/Method_MLP.py`, and change the result file name in `script/stage_2_script/script_mlp.py`.
 
