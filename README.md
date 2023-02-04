@@ -25,6 +25,7 @@ In this stage, we use accuracy, precision, recall, and F1 score as our evaluatio
 ```
 python                    3.8.16
 pytorch                   1.13.1
+numpy                     1.23.5
 scikit-learn              1.2.0
 tensorboard               2.11.2
 ```
