@@ -21,7 +21,27 @@ The `.pkl` file saves the corresponding model's predict label and the true label
 
 In this stage, we use accuracy, precision, recall, and F1 score as our evaluation metric.
 
-### Environment
+## Stage 3
+### Task Description
+In stage 3, we aim to train three CNN model to do the image classification task based on PyTorch.
+
+### Data
+The dataset files we used in this stage consist of minist dataset for handwritten digits, orl dataset for face images and cifar dataset for different kinds of color images. The training and test data files of stage 3 are loaded from `data/stage_3_data` using the code `source_code/Dataset_Loader.py`. *Note: I made a slightly change in the dataset class to make it easier to divide the batches and to disrupt the order of the training set batches, and I did not use the data from torchvision.*
+
+(Since the size of training dataset exceeds GitHub's file size limit, so I didn't upload the dataset. You need to download and add the dataset here to train the model.)
+### Training
+All of the related source code files are in `source_code/stage_3_code/`, and the training script is in `script/stage_3_script/script_mnist__cnn.py`, `script/stage_3_script/script_orl__cnn.py` and `script/stage_3_script/script_cifar__cnn.py`. Use command like `python script/stage_3_script/script_cifar__cnn.py` to train and test these CNN models.
+
+In this stage, I have not used the configuration file, so if you want to change the training setting or model setting, you need to change the related parameter in the model source code (i.e., `source_code/stage_3_code/ORL_CNN.py`), and change the corresponding result file name in the script files.
+
+### Experiment Result
+All of the testing experiment result files are in `result/stage_3_result`. 
+
+The `.pkl` file saves the corresponding model's predict label and the true label of each test examples, and the `.txt` file saves the corresponding metrics result of test dataset.
+
+In this stage, we use accuracy, precision, recall, and F1 score as our evaluation metric.
+
+## Environment
 ```
 python                    3.8.16
 pytorch                   1.13.1
