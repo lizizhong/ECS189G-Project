@@ -52,7 +52,7 @@ class CNN_MNIST(method, nn.Module):
         self.conv2 = nn.Sequential( # (16,14,14)
                              nn.Conv2d(16, 32, 5, 1, 2), # (32,14,14)
                              nn.ReLU(),
-                             nn.MaxPool2d(2) # (32,7,7)
+                             nn.MaxPool2d(kernel_size=2) # (32,7,7)
                              )
         self.out = nn.Linear(32*7*7, 10)
 
@@ -81,7 +81,7 @@ class CNN_MNIST(method, nn.Module):
         loss_function = nn.CrossEntropyLoss()
         # for training accuracy investigation purpose
         accuracy_evaluator = Evaluate_Accuracy('training evaluator', '')
-
+        global_step = 0
         # it will be an iterative gradient updating process
         # we don't do mini-batch, we use the whole input as one batch
         # you can try to split X and y into smaller-sized batches by yourself
@@ -94,7 +94,8 @@ class CNN_MNIST(method, nn.Module):
                 y_true = torch.LongTensor(img_label)
                 # calculate the training loss
                 train_loss = loss_function(y_pred, y_true)
-                writer.add_scalar("Loss/train", train_loss, epoch)
+                writer.add_scalar("train_loss/train_step", train_loss, global_step)
+                global_step += 1
 
                 # check here for the gradient init doc: https://pytorch.org/docs/stable/generated/torch.optim.Optimizer.zero_grad.html
                 optimizer.zero_grad()

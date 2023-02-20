@@ -8,6 +8,7 @@ Concrete SettingModule class for a specific experimental SettingModule
 from source_code.base_class.setting import setting
 from sklearn.model_selection import KFold
 import numpy as np
+from torch.utils.data import DataLoader
 
 class Setting_KFold_CV(setting):
     fold = 3
@@ -16,25 +17,15 @@ class Setting_KFold_CV(setting):
         
         # load dataset
         if self.data_split:
-            train_loaded_data = self.train_dataset.load()
-            test_loaded_data = self.test_dataset.load()
+            # train_loaded_data = self.train_dataset.load()
+            train_dataloader = DataLoader(self.train_dataset, batch_size=100, shuffle=True)
+            test_dataloader = DataLoader(self.test_dataset, batch_size=100, shuffle=False)
+            # test_loaded_data = self.test_dataset.load()
         else:
             loaded_data = self.dataset.load()
-        
-        # kf = KFold(n_splits=self.fold, shuffle=True)
-        
-        # fold_count = 0
-        score_dict = {}
-        # for train_index, test_index in zip(kf.split(train_loaded_data['X']), kf.split(test_loaded_data['X'])):
-        #     fold_count += 1
-        #     print('************ Fold:', fold_count, '************')
-        # no need to use cross-validator in this stage
-        X_train, X_test = np.array(train_loaded_data['X']), np.array(test_loaded_data['X'])
-        y_train, y_test = np.array(train_loaded_data['y']), np.array(test_loaded_data['y'])
 
-        # run MethodModule
-        self.method.data = {'train': {'X': X_train, 'y': y_train}, 'test': {'X': X_test, 'y': y_test}}
-        learned_result = self.method.run()
+        data = {'train': train_dataloader, 'test': test_dataloader}
+        learned_result = self.method.run(data)
 
         # save raw ResultModule
         self.result.data = learned_result
@@ -43,7 +34,7 @@ class Setting_KFold_CV(setting):
 
         self.evaluate.data = learned_result
         score_dict, metric_report = self.evaluate.evaluate()
-        
+
         # return np.mean(score_list), np.std(score_list)
         return score_dict, metric_report
         
