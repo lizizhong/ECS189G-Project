@@ -1,5 +1,7 @@
+import sys
+sys.path.append('../..')
 from source_code.stage_3_code.Dataset_Loader import Dataset_Loader
-from source_code.stage_3_code.Method_CNN import CNN_MNIST
+from source_code.stage_3_code.ORL_CNN import CNN_ORL
 from source_code.stage_3_code.Result_Saver import Result_Saver
 from source_code.stage_3_code.Setting_KFold_CV import Setting_KFold_CV
 from source_code.stage_3_code.Evaluate_Accuracy import Evaluate_Accuracy
@@ -14,21 +16,21 @@ if 1:
     # ------------------------------------------------------
 
     # ---- objection initialization setction ---------------
-    dataset_folder_path, file_name = '../../data/stage_3_data/', 'MNIST'
+    dataset_folder_path, file_name = '../../data/stage_3_data/', 'ORL'
     data_split = True
     # load dataset
-    train_data_obj = Dataset_Loader(is_train=True, dName='stage 3 MNIST training dataset',
-                                    dDescription='MNIST dataset for project stage 3',
+    train_data_obj = Dataset_Loader(is_train=True, dName='stage 3 ORL training dataset',
+                                    dDescription='ORL dataset for project stage 3',
                                     dataset_source_folder_path=dataset_folder_path, dataset_source_file_name=file_name)
-    test_data_obj = Dataset_Loader(is_train=False, dName='stage 3 MNIST test dataset',
-                                    dDescription='MNIST dataset for project stage 3',
+    test_data_obj = Dataset_Loader(is_train=False, dName='stage 3 ORL test dataset',
+                                    dDescription='ORL dataset for project stage 3',
                                    dataset_source_folder_path=dataset_folder_path, dataset_source_file_name=file_name)
 
-    method_obj = CNN_MNIST('CNN model for mnist classification', '')
+    method_obj = CNN_ORL('CNN model for orl classification', '')
 
     result_obj = Result_Saver('saver', '')
-    result_obj.result_destination_folder_path = '../../result/stage_3_result/mnist_'
-    result_obj.result_destination_file_name = 'baseline6'
+    result_obj.result_destination_folder_path = '../../result/stage_3_result/orl_'
+    result_obj.result_destination_file_name = 'baseline_20epoch_adam'
 
     setting_obj = Setting_KFold_CV('k fold cross validation', '', data_split)
 
@@ -41,10 +43,10 @@ if 1:
     setting_obj.print_setup_summary()
     score_dict, metric_report = setting_obj.load_run_save_evaluate()
     print('************ Overall Performance ************')
-    print('MNIST Accuracy: ' + str(score_dict['Accuracy'][0]) + ' +/- ' + str(score_dict['Accuracy'][1]))
-    print('MNIST Precision: ' + str(score_dict['Precision'][0]) + '+/-' + str(score_dict['Precision'][1]))
-    print('MNIST Recall: ' + str(score_dict['Recall'][0]) + '+/-' + str(score_dict['Recall'][1]))
-    print('MNIST F1 Score:' + str(str(score_dict['F1'][0])) + '+/-' + str(score_dict['F1'][1]))
+    print('ORL Accuracy: ' + str(score_dict['Accuracy'][0]) + ' +/- ' + str(score_dict['Accuracy'][1]))
+    print('ORL Precision: ' + str(score_dict['Precision'][0]) + '+/-' + str(score_dict['Precision'][1]))
+    print('ORL Recall: ' + str(score_dict['Recall'][0]) + '+/-' + str(score_dict['Recall'][1]))
+    print('ORL F1 Score:' + str(str(score_dict['F1'][0])) + '+/-' + str(score_dict['F1'][1]))
     print('************ Finish ************')
     with open(result_obj.result_destination_folder_path + result_obj.result_destination_file_name + '.txt', 'a') as writer:
         writer.write(metric_report)
