@@ -28,7 +28,7 @@ In stage 3, we aim to train three CNN model to do the image classification task 
 ### Data
 The dataset files we used in this stage consist of minist dataset for handwritten digits, orl dataset for face images and cifar dataset for different kinds of color images. The training and test data files of stage 3 are loaded from `data/stage_3_data` using the code `source_code/Dataset_Loader.py`. *Note: I made a slightly change in the dataset class to make it easier to divide the batches and to disrupt the order of the training set batches, and I did not use the data from torchvision.*
 
-(Since the size of training dataset exceeds GitHub's file size limit, so I didn't upload the dataset. You need to download and add the dataset here to train the model.)
+(Since the size of training dataset exceeds GitHub's file size limit, so I just upload the ORL dataset. You need to download and add another two datasets here to train the model.)
 ### Training
 All of the related source code files are in `source_code/stage_3_code/`, and the training script is in `script/stage_3_script/script_mnist__cnn.py`, `script/stage_3_script/script_orl__cnn.py` and `script/stage_3_script/script_cifar__cnn.py`. Use command like `python script/stage_3_script/script_cifar__cnn.py` to train and test these CNN models.
 
