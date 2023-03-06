@@ -1,0 +1,115 @@
+nohup: ignoring input
+Some weights of the model checkpoint at prajjwal1/bert-mini were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at prajjwal1/bert-mini were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.decoder.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+load dataset finished
+************ Start ************
+dataset: stage 4 text generation training dataset , method: RNN , setting: k fold cross validation , result: saver , evaluation: Four evaluate metrics: Accuracy & Precision & Recall & F1 Score
+method running...
+--start training...
+Step: 1 Loss: 8.501168251037598
+Step: 48 Loss: 8.476332664489746
+Step: 95 Loss: 8.458337783813477
+Step: 142 Loss: 8.428303718566895
+Step: 189 Loss: 8.423354148864746
+Step: 236 Loss: 8.38785457611084
+Step: 283 Loss: 8.368917465209961
+Step: 330 Loss: 8.354846000671387
+Step: 377 Loss: 8.325112342834473
+Step: 424 Loss: 8.294513702392578
+Step: 471 Loss: 8.278697967529297
+Step: 518 Loss: 8.223755836486816
+Step: 565 Loss: 8.195924758911133
+Step: 612 Loss: 8.133467674255371
+Step: 659 Loss: 8.131165504455566
+Step: 706 Loss: 8.096318244934082
+Step: 753 Loss: 8.03577709197998
+Step: 800 Loss: 7.986291408538818
+Step: 847 Loss: 7.95547342300415
+Step: 894 Loss: 7.927126884460449
+Step: 941 Loss: 7.89272928237915
+Step: 988 Loss: 7.825411319732666
+Step: 1035 Loss: 7.801527500152588
+Step: 1082 Loss: 7.776622295379639
+Step: 1129 Loss: 7.695611953735352
+Step: 1176 Loss: 7.680068016052246
+Step: 1223 Loss: 7.649878025054932
+Step: 1270 Loss: 7.6226091384887695
+Step: 1317 Loss: 7.605278968811035
+Step: 1364 Loss: 7.565855026245117
+Step: 1411 Loss: 7.5554304122924805
+Step: 1458 Loss: 7.48086404800415
+Step: 1505 Loss: 7.455633163452148
+Step: 1552 Loss: 7.445943832397461
+Step: 1599 Loss: 7.46921968460083
+Step: 1646 Loss: 7.420205116271973
+Step: 1693 Loss: 7.394452095031738
+Step: 1740 Loss: 7.336527347564697
+Step: 1787 Loss: 7.306139945983887
+Step: 1834 Loss: 7.249624729156494
+Step: 1881 Loss: 7.270692825317383
+Step: 1928 Loss: 7.259336948394775
+Step: 1975 Loss: 7.2369771003723145
+Step: 2022 Loss: 7.135523319244385
+Step: 2069 Loss: 7.204422950744629
+Step: 2116 Loss: 7.179961681365967
+Step: 2163 Loss: 7.160172462463379
+Step: 2210 Loss: 7.122945785522461
+Step: 2257 Loss: 7.095921039581299
+Step: 2304 Loss: 7.146908760070801
+Step: 2351 Loss: 7.05880880355835
+Step: 2398 Loss: 7.056130409240723
+Step: 2445 Loss: 7.043332099914551
+Step: 2492 Loss: 7.0249810218811035
+Step: 2539 Loss: 6.996802806854248
+Step: 2586 Loss: 7.05139684677124
+Step: 2633 Loss: 6.962166786193848
+Step: 2680 Loss: 7.023650169372559
+Step: 2727 Loss: 6.97764778137207
+Step: 2774 Loss: 6.93776273727417
+Step: 2821 Loss: 6.933473587036133
+Step: 2868 Loss: 7.001897811889648
+Step: 2915 Loss: 6.943049430847168
+Step: 2962 Loss: 6.925387382507324
+Step: 3009 Loss: 6.930644989013672
+Step: 3056 Loss: 6.904484748840332
+Step: 3103 Loss: 6.86930513381958
+Step: 3150 Loss: 6.893170356750488
+Step: 3197 Loss: 6.857673168182373
+Step: 3244 Loss: 6.931668281555176
+Step: 3291 Loss: 6.914496421813965
+Step: 3338 Loss: 6.8376545906066895
+Step: 3385 Loss: 6.8074188232421875
+Step: 3432 Loss: 6.804083824157715
+Step: 3479 Loss: 6.853463649749756
+Step: 3526 Loss: 6.83502721786499
+Step: 3573 Loss: 6.8427653312683105
+Step: 3620 Loss: 6.81692361831665
+Step: 3667 Loss: 6.866460800170898
+Step: 3714 Loss: 6.8132500648498535
+Step: 3761 Loss: 6.821579456329346
+Step: 3808 Loss: 6.809998989105225
+Step: 3855 Loss: 6.801650524139404
+Step: 3902 Loss: 6.73000955581665
+Step: 3949 Loss: 6.703390598297119
+Step: 3996 Loss: 6.807513236999512
+Step: 4043 Loss: 6.752713680267334
+Step: 4090 Loss: 6.742476940155029
+Step: 4137 Loss: 6.685534954071045
+Step: 4184 Loss: 6.679879188537598
+Step: 4231 Loss: 6.717223644256592
+Step: 4278 Loss: 6.694143772125244
+Step: 4325 Loss: 6.780346870422363
+Step: 4372 Loss: 6.728480339050293
+Step: 4419 Loss: 6.749210357666016
+Step: 4466 Loss: 6.682210922241211
+Step: 4513 Loss: 6.69576358795166
+Step: 4560 Loss: 6.657493591308594
+Step: 4607 Loss: 6.666209697723389
+Step: 4654 Loss: 6.7692952156066895
+Epoch: 99 Loss: 6.653624057769775
+--start testing...
+['who is she economic Ulta skin leek thrown Ketchup squirrel woohoo Borax Thai Pick breaks medical includes them cow did formation Saccharide Better', 'i am a talked Hurty miles anyway asked stomach as watering cavator players years stock buried Also you Hahahahaha rebuke Vin shutdown Medusa', 'do you have train receding ways He Cheese illusion Just fish stop bald RAINBOW Prince Reisens but wall tell Seaweed Man dermatologist sure', 'what do you life If Laffy her name calendar pee dog Pride me dinar month hawk pearl Keep and As so cars them', 'time flies like blush pointed no LED construction Dam ISIL this Combi mistakes WAKA Nope people else dig through Ketchup to hairdresser the', 'how does a citing himself amusing earlier Are pumpkin patty practice dance blank social puffin repossessed Q code tune girltree proverb general tails']

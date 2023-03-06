@@ -1,0 +1,571 @@
+nohup: ignoring input
+Some weights of the model checkpoint at prajjwal1/bert-mini were not used when initializing BertModel: ['cls.predictions.bias', 'cls.seq_relationship.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+load dataset finished
+************ Start ************
+train_dataset: stage 4 text classification training dataset , test_dataset: stage 4 text classification test dataset , method: RNN model for text classification , setting: k fold cross validation , result: saver , evaluation: Four evaluate metrics: Accuracy & Precision & Recall & F1 Score
+method running...
+--start training...
+evaluating performance...
+[[  24 1477]
+ [  46 1453]]
+              precision    recall  f1-score   support
+
+           0    0.34286   0.01599   0.03055      1501
+           1    0.49590   0.96931   0.65613      1499
+
+    accuracy                        0.49233      3000
+   macro avg    0.41938   0.49265   0.34334      3000
+weighted avg    0.41933   0.49233   0.34313      3000
+
+Epoch: 0 Accuracy: ({'Accuracy': [0.49233333333333335, 0.0], 'Precision': [0.4193297740939379, 0.0], 'Recall': [0.49233333333333335, 0.0], 'F1': [0.3431333942419991, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.34286   0.01599   0.03055      1501\n           1    0.49590   0.96931   0.65613      1499\n\n    accuracy                        0.49233      3000\n   macro avg    0.41938   0.49265   0.34334      3000\nweighted avg    0.41933   0.49233   0.34313      3000\n') Loss: 0.6976627707481384
+evaluating performance...
+[[1457   76]
+ [1240  227]]
+              precision    recall  f1-score   support
+
+           0    0.54023   0.95042   0.68889      1533
+           1    0.74917   0.15474   0.25650      1467
+
+    accuracy                        0.56133      3000
+   macro avg    0.64470   0.55258   0.47269      3000
+weighted avg    0.64240   0.56133   0.47745      3000
+
+Epoch: 1 Accuracy: ({'Accuracy': [0.5613333333333334, 0.0], 'Precision': [0.6424040059178331, 0.0], 'Recall': [0.5613333333333334, 0.0], 'F1': [0.47744934086629004, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.54023   0.95042   0.68889      1533\n           1    0.74917   0.15474   0.25650      1467\n\n    accuracy                        0.56133      3000\n   macro avg    0.64470   0.55258   0.47269      3000\nweighted avg    0.64240   0.56133   0.47745      3000\n') Loss: 0.6698406338691711
+evaluating performance...
+[[ 861  654]
+ [ 312 1173]]
+              precision    recall  f1-score   support
+
+           0    0.73402   0.56832   0.64062      1515
+           1    0.64204   0.78990   0.70833      1485
+
+    accuracy                        0.67800      3000
+   macro avg    0.68803   0.67911   0.67448      3000
+weighted avg    0.68849   0.67800   0.67414      3000
+
+Epoch: 2 Accuracy: ({'Accuracy': [0.678, 0.0], 'Precision': [0.6884856311340127, 0.0], 'Recall': [0.678, 0.0], 'F1': [0.674140625, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.73402   0.56832   0.64062      1515\n           1    0.64204   0.78990   0.70833      1485\n\n    accuracy                        0.67800      3000\n   macro avg    0.68803   0.67911   0.67448      3000\nweighted avg    0.68849   0.67800   0.67414      3000\n') Loss: 0.6051347851753235
+evaluating performance...
+[[1078  469]
+ [ 440 1013]]
+              precision    recall  f1-score   support
+
+           0    0.71014   0.69683   0.70343      1547
+           1    0.68354   0.69718   0.69029      1453
+
+    accuracy                        0.69700      3000
+   macro avg    0.69684   0.69701   0.69686      3000
+weighted avg    0.69726   0.69700   0.69706      3000
+
+Epoch: 3 Accuracy: ({'Accuracy': [0.697, 0.0], 'Precision': [0.6972572219288466, 0.0], 'Recall': [0.697, 0.0], 'F1': [0.6970634914723857, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.71014   0.69683   0.70343      1547\n           1    0.68354   0.69718   0.69029      1453\n\n    accuracy                        0.69700      3000\n   macro avg    0.69684   0.69701   0.69686      3000\nweighted avg    0.69726   0.69700   0.69706      3000\n') Loss: 0.5709798336029053
+evaluating performance...
+[[1072  421]
+ [ 440 1067]]
+              precision    recall  f1-score   support
+
+           0    0.70899   0.71802   0.71348      1493
+           1    0.71707   0.70803   0.71252      1507
+
+    accuracy                        0.71300      3000
+   macro avg    0.71303   0.71302   0.71300      3000
+weighted avg    0.71305   0.71300   0.71300      3000
+
+Epoch: 4 Accuracy: ({'Accuracy': [0.713, 0.0], 'Precision': [0.7130511428286966, 0.0], 'Recall': [0.713, 0.0], 'F1': [0.7129969705471403, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.70899   0.71802   0.71348      1493\n           1    0.71707   0.70803   0.71252      1507\n\n    accuracy                        0.71300      3000\n   macro avg    0.71303   0.71302   0.71300      3000\nweighted avg    0.71305   0.71300   0.71300      3000\n') Loss: 0.5654797554016113
+evaluating performance...
+[[1074  395]
+ [ 461 1070]]
+              precision    recall  f1-score   support
+
+           0    0.69967   0.73111   0.71505      1469
+           1    0.73038   0.69889   0.71429      1531
+
+    accuracy                        0.71467      3000
+   macro avg    0.71502   0.71500   0.71467      3000
+weighted avg    0.71534   0.71467   0.71466      3000
+
+Epoch: 5 Accuracy: ({'Accuracy': [0.7146666666666667, 0.0], 'Precision': [0.7153420921761108, 0.0], 'Recall': [0.7146666666666667, 0.0], 'F1': [0.7146582968740092, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.69967   0.73111   0.71505      1469\n           1    0.73038   0.69889   0.71429      1531\n\n    accuracy                        0.71467      3000\n   macro avg    0.71502   0.71500   0.71467      3000\nweighted avg    0.71534   0.71467   0.71466      3000\n') Loss: 0.5407838225364685
+evaluating performance...
+[[1151  330]
+ [ 549  970]]
+              precision    recall  f1-score   support
+
+           0    0.67706   0.77718   0.72367      1481
+           1    0.74615   0.63858   0.68819      1519
+
+    accuracy                        0.70700      3000
+   macro avg    0.71161   0.70788   0.70593      3000
+weighted avg    0.71204   0.70700   0.70570      3000
+
+Epoch: 6 Accuracy: ({'Accuracy': [0.707, 0.0], 'Precision': [0.7120439366515837, 0.0], 'Recall': [0.707, 0.0], 'F1': [0.7057048157186397, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.67706   0.77718   0.72367      1481\n           1    0.74615   0.63858   0.68819      1519\n\n    accuracy                        0.70700      3000\n   macro avg    0.71161   0.70788   0.70593      3000\nweighted avg    0.71204   0.70700   0.70570      3000\n') Loss: 0.5602813363075256
+evaluating performance...
+[[1213  303]
+ [ 526  958]]
+              precision    recall  f1-score   support
+
+           0    0.69753   0.80013   0.74531      1516
+           1    0.75971   0.64555   0.69800      1484
+
+    accuracy                        0.72367      3000
+   macro avg    0.72862   0.72284   0.72166      3000
+weighted avg    0.72829   0.72367   0.72191      3000
+
+Epoch: 7 Accuracy: ({'Accuracy': [0.7236666666666667, 0.0], 'Precision': [0.7282892483655808, 0.0], 'Recall': [0.7236666666666667, 0.0], 'F1': [0.7219079941465982, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.69753   0.80013   0.74531      1516\n           1    0.75971   0.64555   0.69800      1484\n\n    accuracy                        0.72367      3000\n   macro avg    0.72862   0.72284   0.72166      3000\nweighted avg    0.72829   0.72367   0.72191      3000\n') Loss: 0.5453832149505615
+evaluating performance...
+[[1218  309]
+ [ 513  960]]
+              precision    recall  f1-score   support
+
+           0    0.70364   0.79764   0.74770      1527
+           1    0.75650   0.65173   0.70022      1473
+
+    accuracy                        0.72600      3000
+   macro avg    0.73007   0.72469   0.72396      3000
+weighted avg    0.72959   0.72600   0.72439      3000
+
+Epoch: 8 Accuracy: ({'Accuracy': [0.726, 0.0], 'Precision': [0.7295945933765176, 0.0], 'Recall': [0.726, 0.0], 'F1': [0.7243857087015567, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.70364   0.79764   0.74770      1527\n           1    0.75650   0.65173   0.70022      1473\n\n    accuracy                        0.72600      3000\n   macro avg    0.73007   0.72469   0.72396      3000\nweighted avg    0.72959   0.72600   0.72439      3000\n') Loss: 0.5437668561935425
+evaluating performance...
+[[1144  392]
+ [ 419 1045]]
+              precision    recall  f1-score   support
+
+           0    0.73193   0.74479   0.73830      1536
+           1    0.72721   0.71380   0.72044      1464
+
+    accuracy                        0.72967      3000
+   macro avg    0.72957   0.72929   0.72937      3000
+weighted avg    0.72962   0.72967   0.72959      3000
+
+Epoch: 9 Accuracy: ({'Accuracy': [0.7296666666666667, 0.0], 'Precision': [0.729624219790377, 0.0], 'Recall': [0.7296666666666667, 0.0], 'F1': [0.7295862901366253, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.73193   0.74479   0.73830      1536\n           1    0.72721   0.71380   0.72044      1464\n\n    accuracy                        0.72967      3000\n   macro avg    0.72957   0.72929   0.72937      3000\nweighted avg    0.72962   0.72967   0.72959      3000\n') Loss: 0.5338457226753235
+evaluating performance...
+[[1084  378]
+ [ 434 1104]]
+              precision    recall  f1-score   support
+
+           0    0.71410   0.74145   0.72752      1462
+           1    0.74494   0.71782   0.73113      1538
+
+    accuracy                        0.72933      3000
+   macro avg    0.72952   0.72963   0.72932      3000
+weighted avg    0.72991   0.72933   0.72937      3000
+
+Epoch: 10 Accuracy: ({'Accuracy': [0.7293333333333333, 0.0], 'Precision': [0.7299090464582456, 0.0], 'Recall': [0.7293333333333333, 0.0], 'F1': [0.7293670177933835, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.71410   0.74145   0.72752      1462\n           1    0.74494   0.71782   0.73113      1538\n\n    accuracy                        0.72933      3000\n   macro avg    0.72952   0.72963   0.72932      3000\nweighted avg    0.72991   0.72933   0.72937      3000\n') Loss: 0.5411164164543152
+evaluating performance...
+[[ 983  494]
+ [ 318 1205]]
+              precision    recall  f1-score   support
+
+           0    0.75557   0.66554   0.70770      1477
+           1    0.70924   0.79120   0.74798      1523
+
+    accuracy                        0.72933      3000
+   macro avg    0.73241   0.72837   0.72784      3000
+weighted avg    0.73205   0.72933   0.72815      3000
+
+Epoch: 11 Accuracy: ({'Accuracy': [0.7293333333333333, 0.0], 'Precision': [0.7320514718534226, 0.0], 'Recall': [0.7293333333333333, 0.0], 'F1': [0.7281518090843234, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.75557   0.66554   0.70770      1477\n           1    0.70924   0.79120   0.74798      1523\n\n    accuracy                        0.72933      3000\n   macro avg    0.73241   0.72837   0.72784      3000\nweighted avg    0.73205   0.72933   0.72815      3000\n') Loss: 0.5358492732048035
+evaluating performance...
+[[1072  436]
+ [ 369 1123]]
+              precision    recall  f1-score   support
+
+           0    0.74393   0.71088   0.72703      1508
+           1    0.72033   0.75268   0.73615      1492
+
+    accuracy                        0.73167      3000
+   macro avg    0.73213   0.73178   0.73159      3000
+weighted avg    0.73219   0.73167   0.73156      3000
+
+Epoch: 12 Accuracy: ({'Accuracy': [0.7316666666666667, 0.0], 'Precision': [0.7321936056034544, 0.0], 'Recall': [0.7316666666666667, 0.0], 'F1': [0.7315647599934157, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.74393   0.71088   0.72703      1508\n           1    0.72033   0.75268   0.73615      1492\n\n    accuracy                        0.73167      3000\n   macro avg    0.73213   0.73178   0.73159      3000\nweighted avg    0.73219   0.73167   0.73156      3000\n') Loss: 0.5298693776130676
+evaluating performance...
+[[1198  331]
+ [ 454 1017]]
+              precision    recall  f1-score   support
+
+           0    0.72518   0.78352   0.75322      1529
+           1    0.75445   0.69137   0.72153      1471
+
+    accuracy                        0.73833      3000
+   macro avg    0.73982   0.73744   0.73738      3000
+weighted avg    0.73953   0.73833   0.73768      3000
+
+Epoch: 13 Accuracy: ({'Accuracy': [0.7383333333333333, 0.0], 'Precision': [0.7395333803943547, 0.0], 'Recall': [0.7383333333333333, 0.0], 'F1': [0.737683692457251, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.72518   0.78352   0.75322      1529\n           1    0.75445   0.69137   0.72153      1471\n\n    accuracy                        0.73833      3000\n   macro avg    0.73982   0.73744   0.73738      3000\nweighted avg    0.73953   0.73833   0.73768      3000\n') Loss: 0.531995415687561
+evaluating performance...
+[[ 910  600]
+ [ 223 1267]]
+              precision    recall  f1-score   support
+
+           0    0.80318   0.60265   0.68861      1510
+           1    0.67863   0.85034   0.75484      1490
+
+    accuracy                        0.72567      3000
+   macro avg    0.74090   0.72649   0.72173      3000
+weighted avg    0.74132   0.72567   0.72151      3000
+
+Epoch: 14 Accuracy: ({'Accuracy': [0.7256666666666667, 0.0], 'Precision': [0.7413182726637676, 0.0], 'Recall': [0.7256666666666667, 0.0], 'F1': [0.7215052649457862, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.80318   0.60265   0.68861      1510\n           1    0.67863   0.85034   0.75484      1490\n\n    accuracy                        0.72567      3000\n   macro avg    0.74090   0.72649   0.72173      3000\nweighted avg    0.74132   0.72567   0.72151      3000\n') Loss: 0.5440006256103516
+evaluating performance...
+[[ 982  482]
+ [ 318 1218]]
+              precision    recall  f1-score   support
+
+           0    0.75538   0.67077   0.71056      1464
+           1    0.71647   0.79297   0.75278      1536
+
+    accuracy                        0.73333      3000
+   macro avg    0.73593   0.73187   0.73167      3000
+weighted avg    0.73546   0.73333   0.73218      3000
+
+Epoch: 15 Accuracy: ({'Accuracy': [0.7333333333333333, 0.0], 'Precision': [0.7354606334841628, 0.0], 'Recall': [0.7333333333333333, 0.0], 'F1': [0.7321794071400078, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.75538   0.67077   0.71056      1464\n           1    0.71647   0.79297   0.75278      1536\n\n    accuracy                        0.73333      3000\n   macro avg    0.73593   0.73187   0.73167      3000\nweighted avg    0.73546   0.73333   0.73218      3000\n') Loss: 0.526442289352417
+evaluating performance...
+[[1037  468]
+ [ 296 1199]]
+              precision    recall  f1-score   support
+
+           0    0.77794   0.68904   0.73080      1505
+           1    0.71926   0.80201   0.75838      1495
+
+    accuracy                        0.74533      3000
+   macro avg    0.74860   0.74552   0.74459      3000
+weighted avg    0.74870   0.74533   0.74454      3000
+
+Epoch: 16 Accuracy: ({'Accuracy': [0.7453333333333333, 0.0], 'Precision': [0.7486981313414736, 0.0], 'Recall': [0.7453333333333333, 0.0], 'F1': [0.7445425794951412, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.77794   0.68904   0.73080      1505\n           1    0.71926   0.80201   0.75838      1495\n\n    accuracy                        0.74533      3000\n   macro avg    0.74860   0.74552   0.74459      3000\nweighted avg    0.74870   0.74533   0.74454      3000\n') Loss: 0.5176092982292175
+evaluating performance...
+[[ 986  476]
+ [ 288 1250]]
+              precision    recall  f1-score   support
+
+           0    0.77394   0.67442   0.72076      1462
+           1    0.72422   0.81274   0.76593      1538
+
+    accuracy                        0.74533      3000
+   macro avg    0.74908   0.74358   0.74335      3000
+weighted avg    0.74845   0.74533   0.74392      3000
+
+Epoch: /home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+17 Accuracy: ({'Accuracy': [0.7453333333333333, 0.0], 'Precision': [0.7484492767068499, 0.0], 'Recall': [0.7453333333333333, 0.0], 'F1': [0.7439179709895655, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.77394   0.67442   0.72076      1462\n           1    0.72422   0.81274   0.76593      1538\n\n    accuracy                        0.74533      3000\n   macro avg    0.74908   0.74358   0.74335      3000\nweighted avg    0.74845   0.74533   0.74392      3000\n') Loss: 0.5146686434745789
+evaluating performance...
+[[1099  441]
+ [ 337 1123]]
+              precision    recall  f1-score   support
+
+           0    0.76532   0.71364   0.73858      1540
+           1    0.71803   0.76918   0.74272      1460
+
+    accuracy                        0.74067      3000
+   macro avg    0.74168   0.74141   0.74065      3000
+weighted avg    0.74231   0.74067   0.74059      3000
+
+Epoch: 18 Accuracy: ({'Accuracy': [0.7406666666666667, 0.0], 'Precision': [0.7423060409824581, 0.0], 'Recall': [0.7406666666666667, 0.0], 'F1': [0.7405947402856005, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.76532   0.71364   0.73858      1540\n           1    0.71803   0.76918   0.74272      1460\n\n    accuracy                        0.74067      3000\n   macro avg    0.74168   0.74141   0.74065      3000\nweighted avg    0.74231   0.74067   0.74059      3000\n') Loss: 0.5101070404052734
+evaluating performance...
+[[1143  326]
+ [ 450 1081]]
+              precision    recall  f1-score   support
+
+           0    0.71751   0.77808   0.74657      1469
+           1    0.76830   0.70607   0.73587      1531
+
+    accuracy                        0.74133      3000
+   macro avg    0.74291   0.74208   0.74122      3000
+weighted avg    0.74343   0.74133   0.74111      3000
+
+Epoch: 19 Accuracy: ({'Accuracy': [0.7413333333333333, 0.0], 'Precision': [0.7434325386786809, 0.0], 'Recall': [0.7413333333333333, 0.0], 'F1': [0.741112280104228, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.71751   0.77808   0.74657      1469\n           1    0.76830   0.70607   0.73587      1531\n\n    accuracy                        0.74133      3000\n   macro avg    0.74291   0.74208   0.74122      3000\nweighted avg    0.74343   0.74133   0.74111      3000\n') Loss: 0.52219158411026
+evaluating performance...
+[[1230  301]
+ [ 457 1012]]
+              precision    recall  f1-score   support
+
+           0    0.72910   0.80340   0.76445      1531
+           1    0.77075   0.68890   0.72753      1469
+
+    accuracy                        0.74733      3000
+   macro avg    0.74993   0.74615   0.74599      3000
+weighted avg    0.74950   0.74733   0.74637      3000
+
+Epoch: 20 Accuracy: ({'Accuracy': [0.7473333333333333, 0.0], 'Precision': [0.7494990854153584, 0.0], 'Recall': [0.7473333333333333, 0.0], 'F1': [0.7463735219917559, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.72910   0.80340   0.76445      1531\n           1    0.77075   0.68890   0.72753      1469\n\n    accuracy                        0.74733      3000\n   macro avg    0.74993   0.74615   0.74599      3000\nweighted avg    0.74950   0.74733   0.74637      3000\n') Loss: 0.5087419152259827
+evaluating performance...
+[[1019  487]
+ [ 264 1230]]
+              precision    recall  f1-score   support
+
+           0    0.79423   0.67663   0.73073      1506
+           1    0.71637   0.82329   0.76612      1494
+
+    accuracy                        0.74967      3000
+   macro avg    0.75530   0.74996   0.74842      3000
+weighted avg    0.75545   0.74967   0.74835      3000
+
+Epoch: 21 Accuracy: ({'Accuracy': [0.7496666666666667, 0.0], 'Precision': [0.7554547441998337, 0.0], 'Recall': [0.7496666666666667, 0.0], 'F1': [0.7483513898028235, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.79423   0.67663   0.73073      1506\n           1    0.71637   0.82329   0.76612      1494\n\n    accuracy                        0.74967      3000\n   macro avg    0.75530   0.74996   0.74842      3000\nweighted avg    0.75545   0.74967   0.74835      3000\n') Loss: 0.5072478652000427
+evaluating performance...
+[[ 879  605]
+ [ 197 1319]]
+              precision    recall  f1-score   support
+
+           0    0.81691   0.59232   0.68672      1484
+           1    0.68555   0.87005   0.76686      1516
+
+    accuracy                        0.73267      3000
+   macro avg    0.75123   0.73119   0.72679      3000
+weighted avg    0.75053   0.73267   0.72722      3000
+
+Epoch: 22 Accuracy: ({'Accuracy': [0.7326666666666667, 0.0], 'Precision': [0.7505321111789514, 0.0], 'Recall': [0.7326666666666667, 0.0], 'F1': [0.7272170300387597, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.81691   0.59232   0.68672      1484\n           1    0.68555   0.87005   0.76686      1516\n\n    accuracy                        0.73267      3000\n   macro avg    0.75123   0.73119   0.72679      3000\nweighted avg    0.75053   0.73267   0.72722      3000\n') Loss: 0.5254401564598083
+evaluating performance...
+[[1047  464]
+ [ 241 1248]]
+              precision    recall  f1-score   support
+
+           0    0.81289   0.69292   0.74812      1511
+           1    0.72897   0.83815   0.77976      1489
+
+    accuracy                        0.76500      3000
+   macro avg    0.77093   0.76553   0.76394      3000
+weighted avg    0.77124   0.76500   0.76382      3000
+
+Epoch: 23 Accuracy: ({'Accuracy': [0.765, 0.0], 'Precision': [0.7712377735531433, 0.0], 'Recall': [0.765, 0.0], 'F1': [0.7638243441475449, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.81289   0.69292   0.74812      1511\n           1    0.72897   0.83815   0.77976      1489\n\n    accuracy                        0.76500      3000\n   macro avg    0.77093   0.76553   0.76394      3000\nweighted avg    0.77124   0.76500   0.76382      3000\n') Loss: 0.4995078146457672
+evaluating performance...
+[[ 983  541]
+ [ 219 1257]]
+              precision    recall  f1-score   support
+
+           0    0.81780   0.64501   0.72120      1524
+           1    0.69911   0.85163   0.76787      1476
+
+    accuracy                        0.74667      3000
+   macro avg    0.75846   0.74832   0.74454      3000
+weighted avg    0.75941   0.74667   0.74416      3000
+
+Epoch: 24 Accuracy: ({'Accuracy': [0.7466666666666667, 0.0], 'Precision': [0.7594064397676102, 0.0], 'Recall': [0.7466666666666667, 0.0], 'F1': [0.744162321158141, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.81780   0.64501   0.72120      1524\n           1    0.69911   0.85163   0.76787      1476\n\n    accuracy                        0.74667      3000\n   macro avg    0.75846   0.74832   0.74454      3000\nweighted avg    0.75941   0.74667   0.74416      3000\n') Loss: 0.5150681734085083
+evaluating performance...
+[[1023  440]
+ [ 347 1190]]
+              precision    recall  f1-score   support
+
+           0    0.74672   0.69925   0.72220      1463
+           1    0.73006   0.77424   0.75150      1537
+
+    accuracy                        0.73767      3000
+   macro avg    0.73839   0.73674   0.73685      3000
+weighted avg    0.73818   0.73767   0.73721      3000
+
+Epoch: 25 Accuracy: ({'Accuracy': [0.7376666666666667, 0.0], 'Precision': [0.7381829400086576, 0.0], 'Recall': [0.7376666666666667, 0.0], 'F1': [0.7372125596008936, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.74672   0.69925   0.72220      1463\n           1    0.73006   0.77424   0.75150      1537\n\n    accuracy                        0.73767      3000\n   macro avg    0.73839   0.73674   0.73685      3000\nweighted avg    0.73818   0.73767   0.73721      3000\n') Loss: 0.5213410258293152
+evaluating performance...
+[[1169  369]
+ [ 353 1109]]
+              precision    recall  f1-score   support
+
+           0    0.76807   0.76008   0.76405      1538
+           1    0.75034   0.75855   0.75442      1462
+
+    accuracy                        0.75933      3000
+   macro avg    0.75920   0.75931   0.75924      3000
+weighted avg    0.75943   0.75933   0.75936      3000
+
+Epoch: 26 Accuracy: ({'Accuracy': [0.7593333333333333, 0.0], 'Precision': [0.7594278935261334, 0.0], 'Recall': [0.7593333333333333, 0.0], 'F1': [0.7593590147169978, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.76807   0.76008   0.76405      1538\n           1    0.75034   0.75855   0.75442      1462\n\n    accuracy                        0.75933      3000\n   macro avg    0.75920   0.75931   0.75924      3000\nweighted avg    0.75943   0.75933   0.75936      3000\n') Loss: 0.49832016229629517
+evaluating performance...
+[[1071  425]
+ [ 290 1214]]
+              precision    recall  f1-score   support
+
+           0    0.78692   0.71591   0.74974      1496
+           1    0.74070   0.80718   0.77251      1504
+
+    accuracy                        0.76167      3000
+   macro avg    0.76381   0.76154   0.76112      3000
+weighted avg    0.76375   0.76167   0.76115      3000
+
+Epoch: 27 Accuracy: ({'Accuracy': [0.7616666666666667, 0.0], 'Precision': [0.7637468292539328, 0.0], 'Recall': [0.7616666666666667, 0.0], 'F1': [0.7611542774614602, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.78692   0.71591   0.74974      1496\n           1    0.74070   0.80718   0.77251      1504\n\n    accuracy                        0.76167      3000\n   macro avg    0.76381   0.76154   0.76112      3000\nweighted avg    0.76375   0.76167   0.76115      3000\n') Loss: 0.5012168288230896
+evaluating performance...
+[[1095  402]
+ [ 320 1183]]
+              precision    recall  f1-score   support
+
+           0    0.77385   0.73146   0.75206      1497
+           1    0.74637   0.78709   0.76619      1503
+
+    accuracy                        0.75933      3000
+   macro avg    0.76011   0.75928   0.75913      3000
+weighted avg    0.76008   0.75933   0.75914      3000
+
+Epoch: 28 Accuracy: ({'Accuracy': [0.7593333333333333, 0.0], 'Precision': [0.7600844355764622, 0.0], 'Recall': [0.7593333333333333, 0.0], 'F1': [0.7591402059727838, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.77385   0.73146   0.75206      1497\n           1    0.74637   0.78709   0.76619      1503\n\n    accuracy                        0.75933      3000\n   macro avg    0.76011   0.75928   0.75913      3000\nweighted avg    0.76008   0.75933   0.75914      3000\n') Loss: 0.4971831142902374
+evaluating performance...
+[[1129  353]
+ [ 356 1162]]
+              precision    recall  f1-score   support
+
+           0    0.76027   0.76181   0.76104      1482
+           1    0.76700   0.76548   0.76624      1518
+
+    accuracy                        0.76367      3000
+   macro avg    0.76363   0.76364   0.76364      3000
+weighted avg    0.76367   0.76367   0.76367      3000
+
+Epoch: 29 Accuracy: ({'Accuracy': [0.7636666666666667, 0.0], 'Precision': [0.7636733940060673, 0.0], 'Recall': [0.7636666666666667, 0.0], 'F1': [0.7636692666479312, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.76027   0.76181   0.76104      1482\n           1    0.76700   0.76548   0.76624      1518\n\n    accuracy                        0.76367      3000\n   macro avg    0.76363   0.76364   0.76364      3000\nweighted avg    0.76367   0.76367   0.76367      3000\n') Loss: 0.48720479011535645
+evaluating performance...
+[[1129  355]
+ [ 367 1149]]
+              precision    recall  f1-score   support
+
+           0    0.75468   0.76078   0.75772      1484
+           1    0.76396   0.75792   0.76093      1516
+
+    accuracy                        0.75933      3000
+   macro avg    0.75932   0.75935   0.75932      3000
+weighted avg    0.75937   0.75933   0.75934      3000
+
+Epoch: 30 Accuracy: ({'Accuracy': [0.7593333333333333, 0.0], 'Precision': [0.759370467819623, 0.0], 'Recall': [0.7593333333333333, 0.0], 'F1': [0.7593397513963583, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.75468   0.76078   0.75772      1484\n           1    0.76396   0.75792   0.76093      1516\n\n    accuracy                        0.75933      3000\n   macro avg    0.75932   0.75935   0.75932      3000\nweighted avg    0.75937   0.75933   0.75934      3000\n') Loss: 0.4977773427963257
+evaluating performance...
+[[1127  375]
+ [ 359 1139]]
+              precision    recall  f1-score   support
+
+           0    0.75841   0.75033   0.75435      1502
+           1    0.75231   0.76035   0.75631      1498
+
+    accuracy                        0.75533      3000
+   macro avg    0.75536   0.75534   0.75533      3000
+weighted avg    0.75537   0.75533   0.75533      3000
+
+Epoch: 31 Accuracy: ({'Accuracy': [0.7553333333333333, 0.0], 'Precision': [0.7553658671303515, 0.0], 'Recall': [0.7553333333333333, 0.0], 'F1': [0.7553281136942636, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.75841   0.75033   0.75435      1502\n           1    0.75231   0.76035   0.75631      1498\n\n    accuracy                        0.75533      3000\n   macro avg    0.75536   0.75534   0.75533      3000\nweighted avg    0.75537   0.75533   0.75533      3000\n') Loss: 0.4953666925430298
+evaluating performance...
+[[1149  364]
+ [ 327 1160]]
+              precision    recall  f1-score   support
+
+           0    0.77846   0.75942   0.76882      1513
+           1    0.76115   0.78009   0.77051      1487
+
+    accuracy                        0.76967      3000
+   macro avg    0.76981   0.76976   0.76966      3000
+weighted avg    0.76988   0.76967   0.76966      3000
+
+Epoch: 32 Accuracy: ({'Accuracy': [0.7696666666666667, 0.0], 'Precision': [0.7698800386232209, 0.0], 'Recall': [0.7696666666666667, 0.0], 'F1': [0.7696562503414398, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.77846   0.75942   0.76882      1513\n           1    0.76115   0.78009   0.77051      1487\n\n    accuracy                        0.76967      3000\n   macro avg    0.76981   0.76976   0.76966      3000\nweighted avg    0.76988   0.76967   0.76966      3000\n') Loss: 0.488698810338974
+evaluating performance...
+[[1125  386]
+ [ 323 1166]]
+              precision    recall  f1-score   support
+
+           0    0.77693   0.74454   0.76039      1511
+           1    0.75129   0.78308   0.76685      1489
+
+    accuracy                        0.76367      3000
+   macro avg    0.76411   0.76381   0.76362      3000
+weighted avg    0.76421   0.76367   0.76360      3000
+
+Epoch: 33 Accuracy: ({'Accuracy': [0.7636666666666667, 0.0], 'Precision': [0.7642052125458031, 0.0], 'Recall': [0.7636666666666667, 0.0], 'F1': [0.7635988263289325, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.77693   0.74454   0.76039      1511\n           1    0.75129   0.78308   0.76685      1489\n\n    accuracy                        0.76367      3000\n   macro avg    0.76411   0.76381   0.76362      3000\nweighted avg    0.76421   0.76367   0.76360      3000\n') Loss: 0.4822334349155426
+evaluating performance...
+[[1090  397]
+ [ 349 1164]]
+              precision    recall  f1-score   support
+
+           0    0.75747   0.73302   0.74504      1487
+           1    0.74568   0.76933   0.75732      1513
+
+    accuracy                        0.75133      3000
+   macro avg    0.75157   0.75118   0.75118      3000
+weighted avg    0.75152   0.75133   0.75124      3000
+
+Epoch: 34 Accuracy: ({'Accuracy': [0.7513333333333333, 0.0], 'Precision': [0.7515220472019134, 0.0], 'Recall': [0.7513333333333333, 0.0], 'F1': [0.7512351331395266, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.75747   0.73302   0.74504      1487\n           1    0.74568   0.76933   0.75732      1513\n\n    accuracy                        0.75133      3000\n   macro avg    0.75157   0.75118   0.75118      3000\nweighted avg    0.75152   0.75133   0.75124      3000\n') Loss: 0.4965079426765442
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+/home/zizhong/code/ECS189G_Winter_2022_Source_Code_Template/source_code/stage_4_code/Dataset_Loader.py:136: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  return item_label, torch.tensor(content_embedding)
+evaluating performance...
+[[381 127]
+ [122 370]]
+              precision    recall  f1-score   support
+
+           0    0.75746   0.75000   0.75371       508
+           1    0.74447   0.75203   0.74823       492
+
+    accuracy                        0.75100      1000
+   macro avg    0.75096   0.75102   0.75097      1000
+weighted avg    0.75106   0.75100   0.75101      1000
+
+Epoch: 34 Accuracy: ({'Accuracy': [0.751, 0.0], 'Precision': [0.7510649423379241, 0.0], 'Recall': [0.751, 0.0], 'F1': [0.7510136966572956, 0.0]}, '              precision    recall  f1-score   support\n\n           0    0.75746   0.75000   0.75371       508\n           1    0.74447   0.75203   0.74823       492\n\n    accuracy                        0.75100      1000\n   macro avg    0.75096   0.75102   0.75097      1000\nweighted avg    0.75106   0.75100   0.75101      1000\n') Loss: 0.5125842094421387
+--start testing...
+saving results...
+evaluating performance...
+[[9283 3217]
+ [3123 9377]]
+              precision    recall  f1-score   support
+
+           0    0.74827   0.74264   0.74544     12500
+           1    0.74456   0.75016   0.74735     12500
+
+    accuracy                        0.74640     25000
+   macro avg    0.74641   0.74640   0.74640     25000
+weighted avg    0.74641   0.74640   0.74640     25000
+
+************ Overall Performance ************
+RNN Accuracy: 0.7464 +/- 0.0
+RNN Precision: 0.7464139348065789+/-0.0
+RNN Recall: 0.7464+/-0.0
+RNN F1 Score:0.7463964146539518+/-0.0
+************ Finish ************

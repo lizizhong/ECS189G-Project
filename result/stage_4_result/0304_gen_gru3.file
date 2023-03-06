@@ -1,0 +1,18 @@
+nohup: ignoring input
+Some weights of the model checkpoint at prajjwal1/bert-mini were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of the model checkpoint at prajjwal1/bert-mini were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+load dataset finished
+************ Start ************
+dataset: stage 4 text generation training dataset , method: RNN , setting: k fold cross validation , result: saver , evaluation: Four evaluate metrics: Accuracy & Precision & Recall & F1 Score
+method running...
+--start training...
+Step: 1 Loss: 8.490736961364746
+Step: 25 Loss: 8.451286315917969
+Step: 49 Loss: 8.415083885192871
+Epoch: 2 Loss: 8.35185432434082
+--start testing...
+['who is she my want adopt ever europe', 'i am a artists artists Nothing ever want', 'do you have want when want when europe', 'what do you when my Trombones barista SC', 'time flies like artists artists uses hair want', 'how does a barista SC SC biggest hop']
