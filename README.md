@@ -41,6 +41,32 @@ The `.pkl` file saves the corresponding model's predict label and the true label
 
 In this stage, we use accuracy, precision, recall, and F1 score as our evaluation metric.
 
+## Stage 4
+
+### Task Description
+
+In stage 4, we aim to train RNN/LSTM/GRU model to do the text classification and text generation task based on PyTorch.
+
+### Data
+
+The training and test data files of stage 3 are loaded from `data/stage_4_data` using the code `source_code/stage_4_code/Dataset_Loader.py`  for text classification task and `source_code/stage_4_code/Dataset_Loader_Generation.py`  for text generation task.
+
+(Since the size of training dataset exceeds GitHub's file size limit, you need to download and put these two datasets at `data/stage_4_data` to train the model).
+
+### Training
+
+All of the related source code files are in `source_code/stage_4_code/`, and the training script is in `script/stage_4_script/script_rnn.py` and `script/stage_4_script/script_rnn_generation.py`. Use command like `python script/stage_4_script/script_rnn.py` to train and test models.
+
+In this stage, I have not used the configuration file, so if you want to change the training setting or model setting, you need to change the related parameter in the model source code (i.e., `source_code/stage_4_code/Classification_RNN.py`), and change the corresponding result file name in the script files.
+
+### Experiment Result
+
+All of the testing experiment result files are in `result/stage_4_result`. 
+
+The `.pkl` file saves the corresponding model's predict label and the true label of each test examples, the `.txt` file saves the corresponding metrics result of test dataset and the `.file` is the training log for the corresponding model. (For text generation task's files, the filename may not correct due to the unreasonable naming convention.)
+
+For text generation task, I also write the predict function in `source_code/stage_4_code/Generation_RNN.py`,  you can use the corresponding script to train a model and customize your sentence beginning, then run this script to generate the text.
+
 ## Environment
 ```
 python                    3.8.16
@@ -48,4 +74,6 @@ pytorch                   1.13.1
 numpy                     1.23.5
 scikit-learn              1.2.0
 tensorboard               2.11.2
+transformers              4.26.1
+nltk			          3.8.1
 ```
