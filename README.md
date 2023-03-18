@@ -85,6 +85,7 @@ All of the related source code files are in `source_code/stage_5_code/`, and the
 
 In this stage, I have not used the configuration file, so if you want to change the training setting or model setting, you need to change the related parameter in the model source code (i.e., `source_code/stage_5_code/GCN_Model.py`), and change the corresponding result file name in the script files.
 
+Note: I have imported dgl package in the `GCN_layer.py` script for testing, please remove the related code when running stage 5 script since it has not been used.
 ### Experiment Result
 
 All of the testing experiment result files are in `result/stage_5_result`. 
